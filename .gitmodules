@@ -1,0 +1,4 @@
+[submodule "CIEL"]
+	path = CIEL
+	url = https://github.com/ciel-lang/CIEL.git
+	branch = master

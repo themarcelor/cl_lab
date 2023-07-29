@@ -1,0 +1,16 @@
+version: "3"
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.local
+    ports:
+      - "4567:4567"
+    environment:
+      - ENVIRONMENT=dev
+    volumes:
+      - $HOME/.aws:/root/.aws:ro
+      - log-volume:/var/log
+volumes:
+  log-volume:
+

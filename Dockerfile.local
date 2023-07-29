@@ -1,0 +1,9 @@
+FROM clfoundation/sbcl:2.2.4 AS run
+
+WORKDIR /app
+COPY src .
+COPY bin .
+
+VOLUME [ "/var/log" ]
+
+ENTRYPOINT [ "./ciel", "/app/app.lisp" ]
